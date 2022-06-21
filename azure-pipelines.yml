@@ -18,7 +18,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'jmaamj'
+    PathtoPublish: 'https://dev.azure.com/MGB-DEV/DEMO-Scrum/_versionControl?path=%24/DEMO-Scrum/New%20Folder&version=T'
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
