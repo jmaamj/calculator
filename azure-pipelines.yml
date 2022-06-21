@@ -16,11 +16,11 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- task: PublishBuildArtifacts@1
+- task: PublishPipelineArtifact@1
   inputs:
-    PathtoPublish: 'https://dev.azure.com/MGB-DEV/DEMO-Scrum/_versionControl?path=%24/DEMO-Scrum/New%20Folder&version=T'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'Dimmins'
+    publishLocation: 'pipeline'
 
 - script: |
     npm install
